@@ -9,6 +9,7 @@ import API from './api';
 import { TypeUser } from './types';
 import Button from './components/Button';
 import Switch from './components/Switch';
+import imageBg from '../src/assets/bg.webp'
 
 const getUserFromResponse = (data: any): TypeUser => {
   if (!data?.results?.[0]){
@@ -76,7 +77,7 @@ const App = () => {
           User
         </Header>
 
-        <Content background="/bg.webp" align='top'>
+        <Content background={imageBg} align='top'>
           {_showSwitch
             ? <Switch on="Show" off="Hide" checked={checked} defaultChecked={true} onChange={handleInput}/>
             : <Button active={checked} value={String(checked)} disabled={isLoading} onClick={handleButton}>{checked ? 'Hide' : 'Show'}</Button>
