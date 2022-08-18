@@ -1,7 +1,8 @@
 {
   "name": "combination-user",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "homepage": "https://zeonardo.github.io/combination-user",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.3.0",
@@ -17,6 +18,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "yarn test --silent --watchAll=false --json && yarn build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -42,6 +45,7 @@
   },
   "devDependencies": {
     "@types/styled-components": "^5.1.26",
+    "gh-pages": "^4.0.0",
     "styled-components": "^5.3.5"
   }
 }

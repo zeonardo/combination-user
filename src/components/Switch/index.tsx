@@ -16,7 +16,6 @@ const Switch = ({ on, off, checked, defaultChecked, onChange, ...rest }: SwitchP
     else {
       setActiveCheck(event.currentTarget.checked)
     }
-    // eslint-disable-next-line
   }, [])
 
   const handleKey = useCallback((event: React.KeyboardEvent<HTMLLabelElement>) => {
